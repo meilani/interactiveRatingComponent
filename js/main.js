@@ -1,0 +1,1 @@
+const thanksHeading = 'Thank you!'
