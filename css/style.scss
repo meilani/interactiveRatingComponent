@@ -58,6 +58,8 @@ button {
     line-height: 1.3rem;
     letter-spacing: .13em;
     cursor: pointer;
+    padding: .86rem;
+    margin: 0 auto .6rem;
 }
 
 .card {
@@ -84,8 +86,22 @@ button {
 }
 
 .circle {
+    background-color: $bgCircle;
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: .4rem;
+}
+
+.star {
+    background-image: url(../images/icon-star.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1rem;
+    margin-bottom: 1.1rem;
 }
