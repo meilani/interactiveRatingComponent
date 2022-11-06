@@ -22,7 +22,7 @@ body {
     font-size: 14px;
     line-height: 1.6;
 
-    @media screen and (max-width: 1440px) {
+    @media screen and (min-width: 1440px) {
         font-size: 15px;
     }
 }
@@ -57,26 +57,35 @@ button {
     border: none;
     line-height: 1.3rem;
     letter-spacing: .13em;
+    cursor: pointer;
 }
 
 .card {
     border-radius: 15px;
-    background-color: $bgCard;
+    background-image: $bgCard;
     padding: 1.7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    width: 100%;
+    max-width: 327px;
+
+    @media screen and (min-width:1440px) {
+        max-width: 412px;
+    }
 }
 
 .circle-wrap {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.7rem;
+    width: 100%;
 }
 
 .circle {
     border-radius: 50%;
     width: 3rem;
     height: 3rem;
+    cursor: pointer;
 }
