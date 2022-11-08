@@ -2,6 +2,7 @@
 $bgMain: hsl(216, 12%, 9%);
 $bgCard: radial-gradient(98.96% 98.96% at 50% 0%, #232A34 0%, #181E27 100%);
 $bgCircle: hsl(213, 19%, 18%);
+$bgCircleHover: hsl(217,12%,54%);
 $colorText: hsl(217, 12%, 63%);
 $colorHeading: hsl(0, 0%, 100%);
 $colorAccent: hsl(25, 97%, 53%);
@@ -47,9 +48,20 @@ p {
     margin-bottom: 1.7rem;
 }
 
-button {
+.hidden-text {
+    clip: rect(1px 1px 1px 1px); /* IE 6/7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.submit {
     background-color: $colorAccent;
     color: $colorHeading;
+    font-weight: 700;
     text-transform: uppercase;
     width: 100%;
     border-radius: 22.5px;
@@ -60,22 +72,42 @@ button {
     cursor: pointer;
     padding: .86rem;
     margin: 0 auto .6rem;
+    font-family: $font;
+    transition: background-color .3s ease,
+                color .3s ease;
+}
+
+.submit:hover {
+    background-color: hsl(0, 0%, 100%);
+    color: $colorAccent;
 }
 
 .card {
     border-radius: 15px;
     background-image: $bgCard;
     padding: 1.7rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
+
     width: 100%;
     max-width: 327px;
 
     @media screen and (min-width:1440px) {
         max-width: 412px;
     }
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    transition: opacity .3s ease;
+}
+.content.result {
+    align-items: center;
+}
+
+.result p {
+    text-align: center;
 }
 
 .circle-wrap {
@@ -86,16 +118,33 @@ button {
 }
 
 .circle {
+    font-family: $font;
+    color: $colorText;
     background-color: $bgCircle;
     border-radius: 50%;
+    border: none;
+    font-weight: 700;
     width: 3rem;
     height: 3rem;
+    padding-top: 3px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding-top: .4rem;
+    transition: background-color .3s ease,
+                color .3s ease;
+}
+
+.circle:hover {
+    background-color: $bgCircleHover;
+    color:hsl(0, 0%, 100%);
+}
+
+.active-rating,
+.active-rating:hover {
+    background-color: $colorAccent;
+    color:hsl(0, 0%, 100%);
 }
 
 .star {
@@ -104,4 +153,10 @@ button {
     background-repeat: no-repeat;
     background-size: 1rem;
     margin-bottom: 1.1rem;
+    pointer-events: none;
+}
+
+.selected {
+    color: $colorAccent;
+    text-align: center;
 }
