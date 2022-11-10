@@ -38,7 +38,12 @@ h1 {
 
 p {
   font-size: 1rem;
-  margin-bottom: 1.7rem;
+  margin: 0 auto 1.7rem;
+}
+@media screen and (min-width: 1440px) {
+  p {
+    max-width: 340px;
+  }
 }
 
 .hidden-text {
@@ -84,6 +89,7 @@ p {
 @media screen and (min-width: 1440px) {
   .card {
     max-width: 412px;
+    padding: 3rem 2rem;
   }
 }
 
@@ -151,4 +157,23 @@ p {
 .selected {
   color: hsl(25deg, 97%, 53%);
   text-align: center;
+  border-radius: 22.5px;
+  background-color: hsl(213deg, 19%, 18%);
+  line-height: 1.6;
+  padding: 0.5rem 0.85rem 0.14rem;
+  margin-bottom: 1.7rem;
+}
+
+.img {
+  aspect-ratio: 3/2;
+  width: 144px;
+  height: auto;
+  display: block;
+  margin-bottom: 1.7rem;
+}
+@media screen and (min-width: 1440px) {
+  .img {
+    width: 162px;
+    margin-bottom: 2.13rem;
+  }
 }/*# sourceMappingURL=style.css.map */

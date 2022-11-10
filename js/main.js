@@ -7,6 +7,8 @@ const content = document.querySelector('#content')
 for (let rating of ratings) {
     rating.addEventListener('click', ()=> {
         ratingNumber = rating.dataset.rate
+
+
         ratings.forEach(element => {
             element.classList.remove('active-rating')
         })
@@ -24,6 +26,7 @@ submit.addEventListener('click', ()=> {
             height="96"
             alt="an illustration of a phone with a credit card going in and a receipt coming out"
             loading="lazy" 
+            class="img"
         >
         <div class="selected">You selected ${ratingNumber} out of 5</div>
         <h1>Thank you!</h1>

@@ -45,7 +45,11 @@ h1 {
 
 p {
     font-size: 1rem;
-    margin-bottom: 1.7rem;
+    margin: 0 auto 1.7rem;
+
+    @media screen and (min-width: 1440px) {
+        max-width: 340px;
+    }
 }
 
 .hidden-text {
@@ -92,6 +96,7 @@ p {
 
     @media screen and (min-width:1440px) {
         max-width: 412px;
+        padding: 3rem 2rem;
     }
 }
 
@@ -159,4 +164,22 @@ p {
 .selected {
     color: $colorAccent;
     text-align: center;
+    border-radius: 22.5px;
+    background-color: $bgCircle;
+    line-height: 1.6;
+    padding: .5rem .85rem .14rem;
+    margin-bottom: 1.7rem;
+}
+
+.img {
+    aspect-ratio: 3 / 2;
+    width: 144px;
+    height: auto;
+    display: block;
+    margin-bottom: 1.7rem;
+
+    @media screen and (min-width: 1440px) {
+        width: 162px;
+        margin-bottom: 2.13rem;
+    }
 }
